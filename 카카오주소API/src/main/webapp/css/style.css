@@ -1,0 +1,77 @@
+/* Google Fonts 사용 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #fffbf3; /* 부드러운 크림색 배경 */
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* 📌 입력 폼 전체 정리 */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* 입력 필드 간격 */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="text"] {
+    width: 280px; /* 입력창 크기 조정 */
+    padding: 10px;
+    border: 2px solid #ffa07a;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+/* 📌 우편번호 찾기 버튼 */
+input[type="button"] {
+    background-color: #ff9aa2;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="button"]:hover {
+    background-color: #ff6b6b;
+}
+
+/* 참고항목 (추가주소) 스타일 */
+.input-group .extra {
+    width: 120px;
+    text-align: center;
+}
+
+/* 입력 폼 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.input-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
